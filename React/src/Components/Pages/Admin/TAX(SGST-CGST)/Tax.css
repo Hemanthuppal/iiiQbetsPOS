@@ -1,0 +1,108 @@
+.admin-Tax-container {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .admin-Tax-content {
+    margin-top: 60px; /* Adjust based on header height */
+    margin-left: 200px; /* Adjust based on sidebar width */
+    padding: 20px;
+    width: calc(100% - 220px); /* Adjust width based on sidebar width */
+    transition: margin-left 0.3s ease, width 0.3s ease;
+  }
+  
+  .admin-Tax-content.collapsed {
+    margin-left: 50px; /* Increased margin when collapsed */
+    width: calc(100% - 70px); /* Adjusted width to account for increased margin */
+  }
+
+  
+  @media (max-width: 1024px) {
+    .admin-Tax-container {
+      flex-direction: column;
+    }
+  
+    .admin-Tax-content {
+      margin-left: 0;
+      width: 100%;
+      padding: 15px;
+      margin-top: 20px;
+    }
+  
+    .admin-Tax-content.collapsed {
+      margin-left: 50px; /* Increased margin to move content right */
+      width: calc(100% - 70px); /* Adjusted width */
+    }
+}
+
+@media (max-width: 767px) {
+    .admin-Tax-container {
+      flex-direction: column;
+    }
+  
+    .admin-Tax-content {
+      margin-left: 0;
+      width: 100%;
+      padding: 15px;
+      margin-top: 15px;
+    }
+  
+    .admin-Tax-content.collapsed {
+      margin-left: 0;
+      width: 100%;
+    }
+}  
+
+
+
+.admin-Tax-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.tax-header {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.card-tax {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.container-tax {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.form-section, .table-section {
+  padding: 10px;
+}
+
+.table {
+  width: 100%;
+  margin-top: 20px;
+}
+
+
+.save-btn {
+  background-color: #FFC107; /* Mustard yellow */
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.save-btn:hover {
+  background-color: #e0a800;
+}
