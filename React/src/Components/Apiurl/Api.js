@@ -1,3 +1,3 @@
 
-export const BASE_URL = https://iii-qbets-pos-node.vercel.app';
+export const BASE_URL = 'https://iii-qbets-pos-node.vercel.app';
 
