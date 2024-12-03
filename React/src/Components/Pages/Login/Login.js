@@ -2,9 +2,8 @@ import React, { useState } from 'react';
 import { Form, Button } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './Login.css'
-import axios from 'axios';
-import { BASE_URL } from "./../../Apiurl/Api"
+import './Login.css';
+import { BASE_URL, axiosInstance } from './../../Apiurl/Api';
 
 const Login = () => {
   const [email, setEmail] = useState('');
@@ -14,8 +13,11 @@ const Login = () => {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post(`${BASE_URL}/login`, { email, password });
+      // Use axiosInstance for the API call
+      const response = await axiosInstance.post('/login', { email, password });
+
       const { role } = response.data.user;
+
       if (role === 'Admin') {
         navigate('/dashboard'); // Navigate to admin path
       } else if (role === 'User') {
